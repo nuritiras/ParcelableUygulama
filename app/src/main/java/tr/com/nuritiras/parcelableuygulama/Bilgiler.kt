@@ -3,7 +3,8 @@ package tr.com.nuritiras.parcelableuygulama
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Bilgiler(val adiSoyadi: String?, val telefonNo: String?, val eMail: String?):Parcelable {
+
+class Bilgiler(val adiSoyadi: String?, val telefonNo: String?, val eMail: String?):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
@@ -29,4 +30,5 @@ data class Bilgiler(val adiSoyadi: String?, val telefonNo: String?, val eMail: S
             return arrayOfNulls(size)
         }
     }
+
 }

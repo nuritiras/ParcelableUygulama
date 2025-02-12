@@ -24,10 +24,10 @@ class DetayActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val bilgi = intent.getParcelableExtra<Bilgiler>("bilgi") as Bilgiler
-        binding.textView2.text = bilgi?.adiSoyadi
-        binding.textView3.text = bilgi?.eMail
-        binding.textView4.text = bilgi?.telefonNo
+        val kisi = intent.getParcelableExtra("bilgi", Bilgiler::class.java)
+        binding.textView2.text = kisi?.adiSoyadi
+        binding.textView3.text = kisi?.eMail
+        binding.textView4.text = kisi?.telefonNo
 
     }
 }
